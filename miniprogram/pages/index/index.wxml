@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
 
-  <!-- 用户 openid -->
+  <!-- 用户 openid 
   <view class="userinfo">
     <button 
       open-type="getUserInfo" 
@@ -14,8 +14,8 @@
     </view>
   </view>
 
-
-  <!-- 上传图片 -->
+-->
+  <!-- 上传图片 
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
       <text>上传图片</text>
@@ -24,20 +24,71 @@
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
   </view>
+  
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>恰恰你好呀！</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+-->
+  <view class="index-container">
+    <view class="index-info">
+      <view class="user-img">
+       <open-data class="user-avatar" type="userAvatarUrl"></open-data> 
+      </view>
+      <view class="user-hb">
+        <view class="hb-part tdHb">
+          <view>{{tdHb}}</view>
+          <view>今日赤币</view>
+        </view>
+        <view class="hb-part">
+          <view >{{ydHb}}</view>
+          <view>昨日赤币</view>
+        </view>
+        <view class="hb-part allHb">
+          <view>{{allHb}}</view>
+          <view>总赤币</view>
+        </view>
+      </view>
+    </view>
+    <view class="yesterdayInfo">
+      <text>
+      亲爱的<text class="yesterdayColor">{{role}}</text>，昨天您<text class="yesterdayColor">{{doneThing}}</text>，今天我们也要用心爱恰恰哦～
+      </text>
+    </view>
+    <view class="cb-content">
+      <checkbox-group bindchange="checkboxChange">
+        <view class="cb" wx:for="{{cbItems}}">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+        </view>
+      </checkbox-group>
 
+     
+      <button bindtap="onSubmitDone" class="subBtn">做到啦
+      </button>
+    </view>
+    <view>
+      <button open-type="getUserInfo" class="subBtn auBtn" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </view>
+    
+  </view>
+  
 
-  <!-- 操作数据库 -->
+  <!-- 操作数据库 
   <view class="uploader">
     <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
       <text>前端操作数据库</text>
     </navigator>
   </view>
-
-  <!-- 新建云函数 -->
+  -->
+  <!-- 新建云函数 
   <view class="uploader">
     <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
       <text>快速新建云函数</text>
     </navigator>
   </view>
-
+-->
 </view>

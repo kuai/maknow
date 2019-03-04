@@ -2,18 +2,42 @@
   "cloud": true,
   "pages": [
     "pages/index/index",
+    "pages/photo/photo",
+    "pages/video/video",
+    "pages/science/science",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib"
+    
+
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "恰恰go",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "borderStyle": "white",
+    "list":[
+    {
+      "pagePath": "pages/index/index",
+      "text": "爸妈签到"
+    },
+    {
+      "pagePath":"pages/photo/photo",
+      "text":"成长记录"
+    },{
+      "pagePath": "pages/video/video",
+      "text": "视频"
+    },{
+      "pagePath": "pages/science/science",
+      "text": "科普"
+    }
+    ]
   }
 }
